@@ -5,10 +5,10 @@
 
 ## How this was done
 - Use HxD Hex Editor (can be run on Linux env with wine)
-- Get `libZDefend.so` from MB Bank APK
+- Get `libZDefend.so` from MB Bank app, APKs can be get from Google Play or Telegram : [@embeebundle](https://t.me/embeebundle)
 - Open `libZDefend.so` with HxD Hex Editor, use Replace feature (Ctrl + R)
 - In search for field, type `zimperium`
-- In replace with field, fill 9 empty blank space characters -> Replace all (Be careful, if something went wrong then modified libZefend.so file will not work at all)
+- In replace with field, fill 9 empty blank space characters -> Replace all (Be careful, if something went wrong then modified `libZDefend.so` file will not work at all)
 - After HxD replaced zimperium with 9 empty black space characters, save it with (Ctrl + S)
 - Copy that`libZDefend.so` you just modified to MB Bank lib folder
 - Force close MB Bank app if its not completely stopped, then open MB Bank app again, from now its should load new library and the root detection from Zimperium should be bypassed
@@ -28,6 +28,7 @@ MB Bank v6.4.30 (MBShield) - OK
 ## Usage
 - Download patched lib : [For arm64-v8a devices](https://gitlab.com/cuynu/mbzdefend-workaround/-/blob/main/fixlib-mbv2-arm64/libZDefend.so?ref_type=heads) | [For armeabi-v7a (arm32) devices](https://gitlab.com/cuynu/mbzdefend-workaround/-/blob/main/fixlib-mbv2-arm/libZDefend.so?ref_type=heads)
 - Put `libZDefend.so` file to app lib directory, force close `MB Bank` app then open again to force it loads new library
+
 For arm64 devices
 ```
 /data/app/{random-name}/com.mbmobile-{random-name}/lib/arm64/
