@@ -29,7 +29,7 @@ MB Bank v6.4.28 (MBShield) - OK
 MB Bank v6.4.27 (MBShield) - OK
 
 ## Usage
-- Download patched lib : [For arm64-v8a devices](https://gitlab.com/cuynu/mbzdefend-workaround/-/blob/main/fixlib-mbv3-arm64/libZDefend.so?ref_type=heads) | [For armeabi-v7a (arm32) devices](https://gitlab.com/cuynu/mbzdefend-workaround/-/blob/main/fixlib-mbv3-arm32/libZDefend.so?ref_type=heads)
+- Download patched lib : [For arm64-v8a devices](https://gitlab.com/cuynu/mbzdefend-workaround/-/blob/main/fixlib-mbv3-arm64.zip) | [For armeabi-v7a (arm32) devices](https://gitlab.com/cuynu/mbzdefend-workaround/-/blob/main/fixlib-mbv3-arm32.zip)
 - Put `libZDefend.so` file to app lib directory, force close `MB Bank` app then open again to force it loads new library
 
 For arm64 devices
