@@ -18,6 +18,8 @@
 
 # Tested app version
 
+MB Bank v6.4.32 (MBShield) - OK
+
 MB Bank v6.4.31 (MBShield) - OK
 
 MB Bank v6.4.30 (MBShield) - OK
