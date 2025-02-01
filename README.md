@@ -1,5 +1,9 @@
 # Zimperium (ZDefend) Workaround for MB Bank
 
+- Current version : `v4`
+
+- Status : Working, but some users facing [crash issues after 20 seconds](https://voz.vn/t/thao-luan-ve-root-bang-magisk-module-giai-phap-an-root-cho-phien-ban-moi-24.497191/post-35548153) or when [transfer with more than 20 million VND](https://voz.vn/t/thao-luan-ve-root-bang-magisk-module-giai-phap-an-root-cho-phien-ban-moi-24.497191/post-35463958) which trigger eKYC authentication (reported but no crash logs, no fix)
+
 ## Why this exists ?
 - Because Zimperium and MBBank development team, they didn't respect our freedom and privacy by blocking rooted devices (KernelSU/Magisk/APatch), device using LSPosed, device with accessibility apps enabled
 
@@ -33,8 +37,8 @@ MB Bank v6.4.28 (MBShield) - OK
 MB Bank v6.4.27 (MBShield) - OK
 
 ## Usage
-- Download patched lib : [For arm64-v8a devices](https://gitlab.com/cuynu/mbzdefend-workaround/-/blob/main/fixlib-mbv3-arm64.zip) | [For armeabi-v7a (arm32) devices](https://gitlab.com/cuynu/mbzdefend-workaround/-/blob/main/fixlib-mbv3-arm32.zip)
-- Put `libZDefend.so` file to app lib directory, force close `MB Bank` app then open again to force it loads new library
+- Download pre-patched lib : [For arm64-v8a devices](https://gitlab.com/cuynu/mbzdefend-workaround/-/blob/main/fixlib-mbv4-arm64.zip?ref_type=heads) | [For armeabi-v7a (arm32) devices](https://gitlab.com/cuynu/mbzdefend-workaround/-/blob/main/fixlib-mbv4-arm.zip?ref_type=heads) or patch lib yourself
+- Put `libZDefend.so` and `libvvb2060.so` file to app lib directory, force close `MB Bank` app then open again to force it loads new library
 
 For arm64 devices
 ```
