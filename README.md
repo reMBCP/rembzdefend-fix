@@ -10,9 +10,10 @@
 ## How this was done
 - Use HxD Hex Editor (can be run on Linux env with wine)
 - Get `libZDefend.so` from MB Bank app, APKs can be get from Google Play or Aurora Store
+- For `libvvb2060.so`, create a empty file and name it as `libvvb2060.so`
 - Open `libZDefend.so` with HxD Hex Editor, use Replace feature (Ctrl + R)
 - In search for field, type `zimperium`
-- In replace with field, fill 9 empty blank space characters or leave empty -> Replace all (Be careful, if something went wrong then modified `libZDefend.so` file will not work at all)
+- In replace with field, fill 9 empty blank space characters or any random words that has 9 characters  -> Replace all (Be careful, if something went wrong then modified `libZDefend.so` file will not work at all)
 - After HxD replaced zimperium with 9 empty black space characters or empty, save it with (Ctrl + S)
 - Copy that`libZDefend.so` you just modified to MB Bank lib folder
 - Force close MB Bank app if its not completely stopped, then open MB Bank app again, from now its should load new library and the root & hook detection from Zimperium should be bypassed
