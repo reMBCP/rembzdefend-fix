@@ -18,7 +18,9 @@
 
 # Tested app version
 
-MB Bank v6.4.32 (MBShield) - OK
+MB Bank v6.4.33 (MBShield) - OK (no crashes)
+
+MB Bank v6.4.32 (MBShield) - OK (no crashes)
 
 MB Bank v6.4.31 (MBShield) - OK
 
