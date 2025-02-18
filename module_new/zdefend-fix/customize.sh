@@ -1,0 +1,9 @@
+#!/system/bin/sh
+echo Force closing MBBank app...
+am force-stop com.mbmobile
+echo Patching libZDefend.so on apk path with sed...
+for library in $(find /data/app -name libZDefend.so) ; do busybox sed -i 's|.zimperium|.123456789|g' $library ; done
+echo Starting Flutter activity...
+am start -n com.mbmobile/io.flutter.plugins.MainActivity
+
+echo If You, Google Play or Aurora Store updated MB Bank app and getting detection again, simply reboot your device or run Action to start patching lib again !
