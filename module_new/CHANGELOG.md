@@ -2,12 +2,12 @@
 
 ## Changelogs :
 
-- v1.7-mb
+- v1.6-mb
 ```
 - Test fix installation issue on Magisk/Kitsune Mask
 ```
 
-- v1.6-mb
+- v1.5-mb
 ```
 - Initial release
 ```
