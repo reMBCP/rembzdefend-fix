@@ -2,6 +2,11 @@
 
 ## Changelogs :
 
+- v1.9-mb
+```
+- change patch arguments
+- check for sed version before patching 
+```
 - v1.8-mb
 ```
 - fix patching failure on startup for Magisk
