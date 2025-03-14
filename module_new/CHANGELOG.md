@@ -1,7 +1,11 @@
 # MBZDefend-Fix
 
 ## Changelogs :
-
+- v2.0-mb
+```
+deleting /data/magisk to prevent eKYC failling
+deleting /data/magisk for startup script and actions
+```
 - v1.9-mb
 ```
 - change patch arguments
