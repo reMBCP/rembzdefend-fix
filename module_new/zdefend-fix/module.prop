@@ -1,7 +1,7 @@
 id=zdefend-fix
 name=MB Zimperium Bypass
-version=v1.9-mb
-versionCode=19
+version=v2.0-mb
+versionCode=20
 author=cuynu, xfirstnamelastname
 description=Bypass "Rooted device or JAILBROKEN" screen for MB Bank App by patching libZDefend.so with sed. \n NOTE : This does not bypass VTAP scrren, you have to hide yourself by hiding app with Denylist if you are using Magisk.
 updateJson=https://gitlab.com/cuynu/mbzdefend-workaround/-/raw/main/module_new/remoteupdate.json
