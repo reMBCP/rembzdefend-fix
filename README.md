@@ -6,9 +6,8 @@
 
 - Status : Working !
 
-## Important 
+- Required version : `v6.4.15` and newer
 
-- `v6.4.44` does not have Zimperium detection, so you don't need to use this module !
 
 ## Why this exists ?
 - Cause Zimperium and MB Bank development team, they didn't respect our freedom and privacy by blocking rooted devices (KernelSU/Magisk/APatch), device using LSPosed with a screen showing "THIẾT BỊ JAILBROKEN HOẶC ROOTED" or "JAILBROKEN DEVICE OR ROOTED" (in English)
