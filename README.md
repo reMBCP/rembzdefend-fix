@@ -1,6 +1,6 @@
 # Zimperium (ZDefend) Workaround for MB Bank
 
-- Current module version : `v2.0-mb` | Download from [releases tab](https://gitlab.com/cuynu/mbzdefend-workaround/-/releases)
+- Current module version : `v2.1-mb` | Download from [releases tab](https://gitlab.com/cuynu/mbzdefend-workaround/-/releases)
 
 - Pre-patched binary version : `v4` (Deprecated) | Can be found on repo files
 
@@ -23,10 +23,31 @@
 - Ensure that old root detection (vtap) is bypassed by hiding MB Bank App from root with any old ways, like Denylist as the module does not handle this old root detection method
 - Download mbzdefend-fix module from [releases](https://gitlab.com/cuynu/mbzdefend-workaround/-/releases)
 - Flash with your root solution
-- It should automatically patches `libZDefend.so` and open MB Bank app once it finished.
+- It should automatically patches `libZDefend.so` and `libapp.so` and open MB Bank app once it finished.
+- (If you are using MBCP, you don't have to use this module !)
 
 
 # Tested app version
+
+MB Bank v6.4.48 (MBShield) - OK (no crashes)
+
+MB Bank v6.4.47 (MBShield) - OK (no crashes)
+
+MB Bank v6.4.46 (MBShield) - OK (no crashes)
+
+MB Bank v6.4.45 - OK (no crashes)
+
+MB Bank v6.4.43 (MBShield) - OK (no crashes)
+
+MB Bank v6.4.42 (MBShield) - OK (no crashes)
+
+MB Bank v6.4.41 (MBShield) - OK (no crashes)
+
+MB Bank v6.4.40 (MBShield) - OK (no crashes)
+
+MB Bank v6.4.39 (MBShield) - OK (no crashes)
+
+MB Bank v6.4.38 (MBShield) - OK (no crashes)
 
 MB Bank v6.4.37 (MBShield) - OK (no crashes)
 
