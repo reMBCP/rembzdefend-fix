@@ -1,6 +1,12 @@
 # MBZDefend-Fix
 
 ## Changelogs :
+
+- v2.1-mb
+```
+adapt with v6.4.48+
+```
+
 - v2.0-mb
 ```
 deleting /data/magisk to prevent eKYC failling
