@@ -11,6 +11,9 @@ sed --version
 echo ---------------------------
 echo Patching libZDefend.so on apk path with sed...
 for library in $(find /data/app -name libZDefend.so) ; do sed -i 's|.zimperium|.cuynuttmb|g' $library ; done
+echo Patching libapp.so on apk path with sed...
+for library in $(find /data/app -name libapp.so) ; do sed -i 's|.zimperium|.cuynuttmb|g' $library ; done
+for library in $(find /data/app -name libapp.so) ; do sed -i 's|ZDEFEND|FUCKUMB|g' $library ; done
 echo ---------------------------
 echo Complete !
 echo ---------------------------
