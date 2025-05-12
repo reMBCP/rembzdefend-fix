@@ -2,6 +2,11 @@
 
 ## Changelogs :
 
+- v2.2-mb
+```
+patching [com.mbmobile] only and minor other changes
+```
+
 - v2.1-mb
 ```
 adapt with v6.4.48+

@@ -1,6 +1,6 @@
 # Zimperium (ZDefend) Workaround for MB Bank
 
-- Current module version : `v2.1-mb` | Download from [releases tab](https://gitlab.com/cuynu/mbzdefend-workaround/-/releases)
+- Current module version : `v2.2-mb` | Download from [releases tab](https://gitlab.com/cuynu/mbzdefend-workaround/-/releases)
 
 - Pre-patched binary version : `v4` (Deprecated) | Can be found on repo files
 
