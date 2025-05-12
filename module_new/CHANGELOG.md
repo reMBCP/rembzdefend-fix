@@ -2,6 +2,11 @@
 
 ## Changelogs :
 
+- v2.3-mb
+```
+disable provider before patching
+```
+
 - v2.2-mb
 ```
 patching [com.mbmobile] only and minor other changes
