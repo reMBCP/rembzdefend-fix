@@ -2,6 +2,11 @@
 
 ## Changelogs :
 
+- v2.4-mb
+```
+disable provider silently
+```
+
 - v2.3-mb
 ```
 disable provider before patching
