@@ -1,6 +1,12 @@
 # MBZDefend-Fix
+Bypass new stupid MB Bank zimperium root/hook detection (does not bypass VTAP root detection)
 
 ## Changelogs :
+
+- v2.5-mb
+```
+fix module description.
+```
 
 - v2.4-mb
 ```
