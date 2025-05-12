@@ -9,6 +9,9 @@ echo ---------------------------
 echo Getting sed version...
 sed --version
 echo ---------------------------
+echo Disabling detection provider...
+pm disable com.mbmobile/androidx.UnderlyingVcl
+pm disable com.mbmobile/androidx.cigarette.titles.corporation.moscow.Township
 # For v6.4.47 or lower
 echo Patching libZDefend.so on [com.mbmobile] apk path with sed...
 for library in $(find /data/app -name libZDefend.so | grep com.mbmobile) ; do sed -i 's|.zimperium|.cuynuttmb|g' $library ; done
