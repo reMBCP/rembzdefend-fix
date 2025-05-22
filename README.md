@@ -2,11 +2,9 @@
 
 - Current module version : `v2.5-mb` | Download from [releases tab](https://gitlab.com/cuynu/mbzdefend-fix/-/releases)
 
-- Pre-patched binary version : `v4` (Deprecated) | Can be found on repo files
-
 - Status : Working !
 
-- Required version : `v6.4.15` and newer
+- Required MB Bank app version : `v6.4.15` and newer
 
 
 ## Why this exists ?
@@ -29,64 +27,55 @@
 
 # Tested app version
 
-MB Bank v6.4.48 (MBShield) - OK (no crashes)
+*NEW Zimperium implementation [MB Bank v6.4.49](https://t.me/embeeapks/32) (MBShield) - OK (no crashes) 
 
-MB Bank v6.4.47 (MBShield) - OK (no crashes)
+*New Zimperium implementation [MB Bank v6.4.48](https://t.me/embeeapks/30) (MBShield) - OK (no crashes)
 
-MB Bank v6.4.46 (MBShield) - OK (no crashes)
+[MB Bank v6.4.47](https://t.me/embeeapks/29) (MBShield) - OK (no crashes)
 
-MB Bank v6.4.45 - OK (no crashes)
+[MB Bank v6.4.46](https://t.me/embeeapks/28) (MBShield) - OK (no crashes)
 
-MB Bank v6.4.43 (MBShield) - OK (no crashes)
+[MB Bank v6.4.45](https://t.me/embeeapks/25) - OK (no crashes)
 
-MB Bank v6.4.42 (MBShield) - OK (no crashes)
+[MB Bank v6.4.44](https://t.me/embeeapks/24) - OK - No Zimperium found. (MBShield)
 
-MB Bank v6.4.41 (MBShield) - OK (no crashes)
+[MB Bank v6.4.43](https://t.me/embeeapks/23) (MBShield) - OK (no crashes)
 
-MB Bank v6.4.40 (MBShield) - OK (no crashes)
+[MB Bank v6.4.42](https://t.me/embeeapks/22) (MBShield) - OK (no crashes)
 
-MB Bank v6.4.39 (MBShield) - OK (no crashes)
+[MB Bank v6.4.41](https://t.me/embeeapks/21) (MBShield) - OK (no crashes)
 
-MB Bank v6.4.38 (MBShield) - OK (no crashes)
+[MB Bank v6.4.40](https://t.me/embeeapks/20) (MBShield) - OK (no crashes)
 
-MB Bank v6.4.37 (MBShield) - OK (no crashes)
+[MB Bank v6.4.39](https://t.me/embeeapks/19) (MBShield) - OK (no crashes)
 
-MB Bank v6.4.36 (MBShield) - OK (no crashes)
+[MB Bank v6.4.38](https://t.me/embeeapks/18) (MBShield) - OK (no crashes)
 
-MB Bank v6.4.35 (MBShield) - OK (no crashes)
+[MB Bank v6.4.37](https://t.me/embeeapks/17) (MBShield) - OK (no crashes)
 
-MB Bank v6.4.34 (MBShield) - OK (no crashes)
+[MB Bank v6.4.36](https://t.me/embeeapks/16) (MBShield) - OK (no crashes)
 
-MB Bank v6.4.33 (MBShield) - OK (no crashes)
+[MB Bank v6.4.35](https://t.me/embeeapks/14) (MBShield) - OK (no crashes)
 
-MB Bank v6.4.32 (MBShield) - OK (no crashes)
+[MB Bank v6.4.34](https://t.me/embeeapks/13) (MBShield) - OK (no crashes)
 
-MB Bank v6.4.31 (MBShield) - OK
+[MB Bank v6.4.33](https://t.me/embeeapks/11) (MBShield) - OK (no crashes)
 
-MB Bank v6.4.30 (MBShield) - OK
+[MB Bank v6.4.32](https://t.me/embeeapks/9) (MBShield) - OK (no crashes)
 
-MB Bank v6.4.29 (MBShield) - OK
+[MB Bank v6.4.31](https://t.me/embeeapks/6) (MBShield) - OK
 
-MB Bank v6.4.28 (MBShield) - OK
+[MB Bank v6.4.30](https://t.me/mbmobileold/198) (MBShield) - OK
 
-MB Bank v6.4.27 (MBShield) - OK
+[MB Bank v6.4.29](https://t.me/mbmobileold/197) (MBShield) - OK
+
+[MB Bank v6.4.28](https://t.me/mbmobileold/196) (MBShield) - OK
+
+[MB Bank v6.4.27](https://t.me/mbmobileold/195) (MBShield) - OK
 
 
-## Usage (Pre-patched binary) (Deprecated)
-- Ensure that old root detection (vtap) is bypassed by hiding MB Bank App from root with any old ways, like Denylist
-- Download pre-patched lib : [For arm64-v8a devices](https://gitlab.com/cuynu/mbzdefend-workaround/-/blob/main/fixlib-mbv4-arm64.zip?ref_type=heads) | [For armeabi-v7a (arm32) devices](https://gitlab.com/cuynu/mbzdefend-workaround/-/blob/main/fixlib-mbv4-arm.zip?ref_type=heads) or patch lib yourself
-- Put `libZDefend.so` and `libvvb2060.so` file to app lib directory, force close `MB Bank` app then open again to force it loads new library
 
-For arm64 devices
-```
-/data/app/{random-name}/com.mbmobile-{random-name}/lib/arm64/
-```
-For legacy armeabi-v7a devices (32bit)
-```
-/data/app/{random-name}/com.mbmobile-{random-name}/lib/arm/
-```
-
-## How this was done (Pre-patched binary only) (Old)
+## How this was done (Pre-patched binary only) (OUTDATED)
 - Use HxD Hex Editor (can be run on Linux env with wine)
 - Get `libZDefend.so` from MB Bank app, APKs can be get from Google Play or Aurora Store
 - For `libvvb2060.so`, create a empty file and name it as `libvvb2060.so`
@@ -96,4 +85,3 @@ For legacy armeabi-v7a devices (32bit)
 - After HxD replaced zimperium with 9 empty black space characters or empty, save it with (Ctrl + S)
 - Copy that`libZDefend.so` you just modified to MB Bank lib folder
 - Force close MB Bank app if its not completely stopped, then open MB Bank app again, from now its should load new library and the root & hook detection from Zimperium should be bypassed
-
