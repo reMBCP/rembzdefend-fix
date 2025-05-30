@@ -27,6 +27,8 @@
 
 # Tested app version
 
+*NEW Zimperium implementation [MB Bank v6.4.50](https://t.me/embeeapks/35) (MBShield) - OK (no crashes) 
+
 *NEW Zimperium implementation [MB Bank v6.4.49](https://t.me/embeeapks/32) (MBShield) - OK (no crashes) 
 
 *New Zimperium implementation [MB Bank v6.4.48](https://t.me/embeeapks/30) (MBShield) - OK (no crashes)
