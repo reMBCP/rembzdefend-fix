@@ -16,6 +16,10 @@ for library in $(find /data/app -name libZDefend.so | grep com.mbmobile) ; do se
 echo Patching libapp.so on [com.mbmobile]...
 for library in $(find /data/app -name libapp.so | grep com.mbmobile) ; do sed -i 's|.zimperium|.cuynuttmb|g' $library ; done
 for library in $(find /data/app -name libapp.so | grep com.mbmobile) ; do sed -i 's|ZDEFEND|FUCKUMB|g' $library ; done
+echo "Deleting related detection libraries..."
+for library in $(find /data/app -name libdesignersactivists.so | grep com.mbmobile) ; do rm $library ; done
+# Support for Biz MB Bank v2.0 (Flutter version)
+for library in $(find /data/app -name libholdingshadow.so | grep com.mbbank.biz.prod) ; do rm $library ; done
 echo Done! You can open MB Bank app !
 echo ---------
 echo Tips : If you are using MBCP, you dont need this module at all since MBCP already removed this detection by default.
