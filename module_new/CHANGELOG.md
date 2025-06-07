@@ -3,6 +3,13 @@ Bypass new stupid MB Bank zimperium root/hook detection (does not bypass VTAP ro
 
 ## Changelogs :
 
+- v2.6-mb
+```
+module name changed to "MB ZDefend Bypass"
+delete fake "libZDefend.so" for both MB Bank & BizMB Flutter
+add support for Biz MB Bank v2.0 (Flutter)
+```
+
 - v2.5-mb
 ```
 fix module description.
