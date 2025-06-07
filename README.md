@@ -1,30 +1,35 @@
-# Zimperium (ZDefend) Workaround for MB Bank
+# MB ZDefend Bypass Module for MB Bank
 
 <img alt="https://gitlab.com/cuynu/mbzdefend-fix" src="https://gitlab.com/cuynu/archive/-/raw/main/mbzdefend.png?inline=false" width="" height="" />
 </a>
 
 - Current module version : `v2.5-mb` | Download from [releases tab](https://gitlab.com/cuynu/mbzdefend-fix/-/releases)
 
+- Author : [Cuynu](https://gitlab.com/cuynu)
+
 - Status : Working !
 
 - Required MB Bank app version : `v6.4.15` and newer
 
+- Required Biz MBBank v2.0 app version : `v1.0.85` and newer :>
 
 ## Why this exists ?
-- Cause Zimperium and MB Bank development team, they didn't respect our freedom and privacy by blocking rooted devices (KernelSU/Magisk/APatch), device using LSPosed with a screen showing "THIẾT BỊ JAILBROKEN HOẶC ROOTED" or "JAILBROKEN DEVICE OR ROOTED" (in English)
+- Zimperium and MB Bank development team didn't respect our freedom and privacy by blocking rooted devices (KernelSU/KernelSU-Next/Magisk/APatch), device using LSPosed with a screen showing "THIẾT BỊ JAILBROKEN HOẶC ROOTED" or "JAILBROKEN DEVICE OR ROOTED" (in English) with only "Close app" option.
 
 
 ## Source code
+
+This project are licensed under [MIT License](https://gitlab.com/cuynu/mbzdefend-fix/-/blob/main/LICENSE).
 
 - For module : Located on [module_new](https://gitlab.com/cuynu/mbzdefend-workaround/-/tree/main/module_new)
 
 - For patched lib (Deprecated) : There is no source code for that as it belong to MB Bank development team and Zimperium. You can make your own patched lib with old method below if you don't want to use my pre-patched lib :)
 
 ## Usage (Module)
-- Ensure that old root detection (vtap) is bypassed by hiding MB Bank App from root with any old ways, like Denylist as the module does not handle this old root detection method (For Magisk : [Here](https://www.youtube.com/watch?v=OfFoRltRlME) | For Magisk Delta/Kitsune : [Here](https://www.youtube.com/watch?v=tToyWfJQ-yw)
-- Download mbzdefend-fix module from [releases](https://gitlab.com/cuynu/mbzdefend-workaround/-/releases)
-- Flash with your root solution
-- It should automatically patches `libZDefend.so` and `libapp.so` and open MB Bank app once it finished.
+- Ensure that old root detection (vtap) is bypassed by hiding MB Bank or Biz MBBank v2.0 App from root with any old ways, like Denylist as the module does not handle this old root detection method (For Magisk : [Here](https://www.youtube.com/watch?v=OfFoRltRlME) | For Magisk Delta/Kitsune : [Here](https://www.youtube.com/watch?v=tToyWfJQ-yw)
+- Download mbzdefend-fix module from [releases](https://gitlab.com/cuynu/mbzdefend-workaround/-/releases) or clone the repo, then `./createmodule.sh`
+- Flash with your root app (Magisk, KernelSU, KernelSU Next, APatch, etc)
+- It should automatically patches `libZDefend.so` and `libapp.so` then open MB Bank or Biz MB Bank v2.0 app once it finished.
 - (If you are using MBCP, you don't have to use this module !)
 
 
