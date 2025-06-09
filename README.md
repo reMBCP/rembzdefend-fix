@@ -5,7 +5,7 @@
 
 - Current module version : `v2.6-mb` | Download from [releases tab](https://gitlab.com/cuynu/mbzdefend-fix/-/releases)
 
-- Author : [Cuynu](https://gitlab.com/cuynu)
+- Author : [Cuynu](https://gitlab.com/cuynu) and [backslashxx](https://github.com/backslashxx) for sed script
 
 - Status : Working !
 
@@ -34,6 +34,8 @@ This project are licensed under [MIT License](https://gitlab.com/cuynu/mbzdefend
 
 
 # Tested app version
+
+*New Zimperium implementation [MB Bank v6.4.52](https://t.me/embeeapks/41) (MBShield) - OK (no crashes)
 
 *New Zimperium implementation [MB Bank v6.4.51](https://t.me/embeeapks/36) (MBShield) - OK (no crashes)
 
