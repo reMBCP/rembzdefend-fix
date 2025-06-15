@@ -35,6 +35,8 @@ This project are licensed under [MIT License](https://gitlab.com/cuynu/mbzdefend
 
 # Tested app version
 
+*New Zimperium implementation [MB Bank v6.4.53](https://t.me/embeeapks/42) (MBShield) - OK (no crashes)
+
 *New Zimperium implementation [MB Bank v6.4.52](https://t.me/embeeapks/41) (MBShield) - OK (no crashes)
 
 *New Zimperium implementation [MB Bank v6.4.51](https://t.me/embeeapks/36) (MBShield) - OK (no crashes)
