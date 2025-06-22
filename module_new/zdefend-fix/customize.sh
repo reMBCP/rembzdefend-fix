@@ -31,6 +31,8 @@ echo ---------------------------
 sleep 2
 echo Starting Flutter activity...
 am start -n com.mbmobile/io.flutter.plugins.MainActivity
+sleep 2
+am start -a android.intent.action.VIEW -d https://gitlab.com/mbcp/info/-/wikis/vtaphide
 
 echo If you, Google Play or Aurora Store updated MB Bank app and getting detection again, simply reboot your device or run Action to start patching lib again !
 
