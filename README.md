@@ -34,64 +34,67 @@ This project are licensed under [MIT License](https://gitlab.com/cuynu/mbzdefend
 
 
 # Tested app version
+- Checked mark is the version that already tested and working~
 
-*New Zimperium implementation [MB Bank v6.4.55](https://t.me/embeeapks/45) (MBShield) - OK (no crashes)
+- [x] [MB Bank v6.4.56](https://t.me/embeeapks/46) (MBShield) (no crashes)
 
-*New Zimperium implementation [MB Bank v6.4.54](https://t.me/embeeapks/43) (MBShield) - OK (no crashes)
+- [x] [MB Bank v6.4.55](https://t.me/embeeapks/45) (MBShield) (no crashes)
 
-*New Zimperium implementation [MB Bank v6.4.53](https://t.me/embeeapks/42) (MBShield) - OK (no crashes)
+- [x] [MB Bank v6.4.54](https://t.me/embeeapks/43) (MBShield) (no crashes)
 
-*New Zimperium implementation [MB Bank v6.4.52](https://t.me/embeeapks/41) (MBShield) - OK (no crashes)
+- [x] [MB Bank v6.4.53](https://t.me/embeeapks/42) (MBShield) (no crashes)
 
-*New Zimperium implementation [MB Bank v6.4.51](https://t.me/embeeapks/36) (MBShield) - OK (no crashes)
+- [x] [MB Bank v6.4.52](https://t.me/embeeapks/41) (MBShield) (no crashes)
 
-*NEW Zimperium implementation [MB Bank v6.4.50](https://t.me/embeeapks/35) (MBShield) - OK (no crashes) 
+- [x] [MB Bank v6.4.51](https://t.me/embeeapks/36) (MBShield) (no crashes)
 
-*NEW Zimperium implementation [MB Bank v6.4.49](https://t.me/embeeapks/32) (MBShield) - OK (no crashes) 
+- [x] [MB Bank v6.4.50](https://t.me/embeeapks/35) (MBShield) (no crashes) 
 
-*New Zimperium implementation [MB Bank v6.4.48](https://t.me/embeeapks/30) (MBShield) - OK (no crashes)
+- [x] [MB Bank v6.4.49](https://t.me/embeeapks/32) (MBShield) (no crashes) 
 
-[MB Bank v6.4.47](https://t.me/embeeapks/29) (MBShield) - OK (no crashes)
+- [x] [MB Bank v6.4.48](https://t.me/embeeapks/30) (MBShield) (no crashes)
 
-[MB Bank v6.4.46](https://t.me/embeeapks/28) (MBShield) - OK (no crashes)
+- [x] [MB Bank v6.4.47](https://t.me/embeeapks/29) (MBShield) (no crashes)
 
-[MB Bank v6.4.45](https://t.me/embeeapks/25) - OK (no crashes)
+- [x] [MB Bank v6.4.46](https://t.me/embeeapks/28) (MBShield) (no crashes)
 
-[MB Bank v6.4.44](https://t.me/embeeapks/24) - OK - No Zimperium found. (MBShield)
+- [x] [MB Bank v6.4.45](https://t.me/embeeapks/25) (no crashes)
 
-[MB Bank v6.4.43](https://t.me/embeeapks/23) (MBShield) - OK (no crashes)
+- [x] [MB Bank v6.4.44](https://t.me/embeeapks/24) -  No Zimperium found. (MBShield)
 
-[MB Bank v6.4.42](https://t.me/embeeapks/22) (MBShield) - OK (no crashes)
+- [x] [MB Bank v6.4.43](https://t.me/embeeapks/23) (MBShield) (no crashes)
 
-[MB Bank v6.4.41](https://t.me/embeeapks/21) (MBShield) - OK (no crashes)
+- [x] [MB Bank v6.4.42](https://t.me/embeeapks/22) (MBShield) (no crashes)
 
-[MB Bank v6.4.40](https://t.me/embeeapks/20) (MBShield) - OK (no crashes)
+- [x] [MB Bank v6.4.41](https://t.me/embeeapks/21) (MBShield) (no crashes)
 
-[MB Bank v6.4.39](https://t.me/embeeapks/19) (MBShield) - OK (no crashes)
+- [x] [MB Bank v6.4.40](https://t.me/embeeapks/20) (MBShield) (no crashes)
 
-[MB Bank v6.4.38](https://t.me/embeeapks/18) (MBShield) - OK (no crashes)
+- [x] [MB Bank v6.4.39](https://t.me/embeeapks/19) (MBShield) (no crashes)
 
-[MB Bank v6.4.37](https://t.me/embeeapks/17) (MBShield) - OK (no crashes)
+- [x] [MB Bank v6.4.38](https://t.me/embeeapks/18) (MBShield) (no crashes)
 
-[MB Bank v6.4.36](https://t.me/embeeapks/16) (MBShield) - OK (no crashes)
+- [x] [MB Bank v6.4.37](https://t.me/embeeapks/17) (MBShield) (no crashes)
 
-[MB Bank v6.4.35](https://t.me/embeeapks/14) (MBShield) - OK (no crashes)
+- [x] [MB Bank v6.4.36](https://t.me/embeeapks/16) (MBShield) (no crashes)
 
-[MB Bank v6.4.34](https://t.me/embeeapks/13) (MBShield) - OK (no crashes)
+- [x] [MB Bank v6.4.35](https://t.me/embeeapks/14) (MBShield) (no crashes)
 
-[MB Bank v6.4.33](https://t.me/embeeapks/11) (MBShield) - OK (no crashes)
+- [x] [MB Bank v6.4.34](https://t.me/embeeapks/13) (MBShield) (no crashes)
 
-[MB Bank v6.4.32](https://t.me/embeeapks/9) (MBShield) - OK (no crashes)
+- [x] [MB Bank v6.4.33](https://t.me/embeeapks/11) (MBShield) (no crashes)
 
-[MB Bank v6.4.31](https://t.me/embeeapks/6) (MBShield) - OK
+- [x] [MB Bank v6.4.32](https://t.me/embeeapks/9) (MBShield) (no crashes)
 
-[MB Bank v6.4.30](https://t.me/mbmobileold/198) (MBShield) - OK
+- [x] [MB Bank v6.4.31](https://t.me/embeeapks/6) (MBShield)
 
-[MB Bank v6.4.29](https://t.me/mbmobileold/197) (MBShield) - OK
+- [x] [MB Bank v6.4.30](https://t.me/mbmobileold/198) (MBShield) 
 
-[MB Bank v6.4.28](https://t.me/mbmobileold/196) (MBShield) - OK
+- [x] [MB Bank v6.4.29](https://t.me/mbmobileold/197) (MBShield) 
 
-[MB Bank v6.4.27](https://t.me/mbmobileold/195) (MBShield) - OK
+- [x] [MB Bank v6.4.28](https://t.me/mbmobileold/196) (MBShield) 
+
+- [x] [MB Bank v6.4.27](https://t.me/mbmobileold/195) (MBShield) 
 
 
 
