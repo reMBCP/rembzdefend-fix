@@ -3,6 +3,12 @@ Bypass new stupid MB Bank zimperium root/hook detection (does not bypass VTAP ro
 
 ## Changelogs :
 
+- v2.9-mb
+```
+workaround for v6.4.56+, ugly but works :<
+- it's now requires you to run "Action" on root app -> modules -> MB ZDefend Bypass everytime you need to use MB Bank app...
+```
+
 - v2.8-mb
 ```
 open url that guide users follow step to hide vtap detection

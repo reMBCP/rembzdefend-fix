@@ -3,7 +3,7 @@
 <img alt="https://gitlab.com/cuynu/mbzdefend-fix" src="https://gitlab.com/cuynu/archive/-/raw/main/mbzdefend.png?inline=false" width="" height="" />
 </a>
 
-- Current module version : `v2.6-mb` | Download from [releases tab](https://gitlab.com/cuynu/mbzdefend-fix/-/releases)
+- Current module version : `v2.9-mb` | Download from [releases tab](https://gitlab.com/cuynu/mbzdefend-fix/-/releases)
 
 - Author : [Cuynu](https://gitlab.com/cuynu) and [backslashxx](https://github.com/backslashxx) for sed script
 
@@ -30,13 +30,16 @@ This project are licensed under [MIT License](https://gitlab.com/cuynu/mbzdefend
 - Download mbzdefend-fix module from [releases](https://gitlab.com/cuynu/mbzdefend-workaround/-/releases) or clone the repo, then `./createmodule.sh`
 - Flash with your root app (Magisk, KernelSU, KernelSU Next, APatch, etc)
 - It should automatically patches `libZDefend.so` and `libapp.so` then open MB Bank or Biz MB Bank v2.0 app once it finished.
-- (If you are using MBCP, you don't have to use this module !)
+- NOTE : Every time you need to use MB Bank, you MUST run "Action" on root app -> Modules -> MB ZDefend Bypass instead of open app directly from app drawer (Applies for v6.4.56+ due to server-side MB changes)
+- NOTE : App will open with 1005/1007 error or stuck on MB logo, DON'T PANIC and wait for error popup appears, then press "Try again" until app enter login screen !!!
 
 
 # Tested app version
 - Checked mark is the version that already tested and working~
 
-- [x] [MB Bank v6.4.56](https://t.me/embeeapks/46) (MBShield) (no crashes)
+- [x] [MB Bank v6.4.57](https://t.me/embeeapks/47) (MBShield) (need workaround)
+
+- [x] [MB Bank v6.4.56](https://t.me/embeeapks/46) (MBShield) (need workaround)
 
 - [x] [MB Bank v6.4.55](https://t.me/embeeapks/45) (MBShield) (no crashes)
 
