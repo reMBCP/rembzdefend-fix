@@ -30,8 +30,15 @@ echo "Completed patching :)"
 echo ---------------------------
 sleep 2
 echo Starting Flutter activity...
+echo "ATTENTION : Network traffic will be redirected to [medium.com] for 20 seconds !!!"
+echo "Press [Try again] after got 1005/1007 error on MB, so it's can bypass device not secure dialog !"
+iptables -t nat -A OUTPUT -p tcp -d 0/0 -j DNAT --to-destination 162.159.153.4:443
 am start -n com.mbmobile/io.flutter.plugins.MainActivity
-sleep 2
+sleep 20
+echo "Restoring network traffic"
+iptables -t nat -F OUTPUT
+su -lp 2000 -c "cmd notification post -S bigtext -t 'MBZDefend-Fix' tag 'Please click "Try again" on 1005/1007 screen to continue using MB !'" >/dev/null 2>&1
+sleep 3
 am start -a android.intent.action.VIEW -d https://gitlab.com/mbcp/info/-/wikis/vtaphide
 
 echo If you, Google Play or Aurora Store updated MB Bank app and getting detection again, simply reboot your device or run Action to start patching lib again !
