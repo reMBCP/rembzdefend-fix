@@ -29,6 +29,7 @@ echo ---------------------------
 echo "Completed patching :)"
 echo ---------------------------
 sleep 2
+unzip -o "$ZIPFILE" 'script/MB_Bank.sh' -d '/data/user/0/com.termux/files/home/.shortcuts/'
 echo Starting Flutter activity...
 echo "ATTENTION : Network traffic will be redirected to [medium.com] for 20 seconds !!!"
 echo "Press [Try again] after got 1005/1007 error on MB, so it's can bypass device not secure dialog !"
