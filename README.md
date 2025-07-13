@@ -3,7 +3,7 @@
 <img alt="https://gitlab.com/cuynu/mbzdefend-fix" src="https://gitlab.com/cuynu/archive/-/raw/main/mbzdefend.png?inline=false" width="" height="" />
 </a>
 
-- Current module version : `v2.9-mb` | Download from [releases tab](https://gitlab.com/cuynu/mbzdefend-fix/-/releases)
+- Current module version : `v3.0-mb` | Download from [releases tab](https://gitlab.com/cuynu/mbzdefend-fix/-/releases)
 
 - Author : [Cuynu](https://gitlab.com/cuynu) and [backslashxx](https://github.com/backslashxx) for sed script
 

@@ -1,6 +1,6 @@
 {
-	"version": "v2.9-mb",
-	"versionCode": "29",
-	"zipUrl": "https://gitlab.com/-/project/65382413/uploads/c5d65bfda7c85639647b776300ec5745/mbzdefend-fix.zip",
+	"version": "v3.0-mb",
+	"versionCode": "30",
+	"zipUrl": "https://gitlab.com/-/project/65382413/uploads/84874b71cbbe26bcc2391ebd93ffa4d2/mbzdefend-fix.zip",
 	"changelog": "https://gitlab.com/cuynu/mbzdefend-workaround/-/raw/main/module_new/CHANGELOG.md"
 }

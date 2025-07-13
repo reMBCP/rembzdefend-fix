@@ -3,6 +3,11 @@ Bypass new stupid MB Bank zimperium root/hook detection (does not bypass VTAP ro
 
 ## Changelogs :
 
+- v3.0-mb
+```
+added termux script for easier use
+```
+
 - v2.9-mb
 ```
 workaround for v6.4.56+, ugly but works :<
