@@ -7,11 +7,17 @@
 
 - Author : [Cuynu](https://gitlab.com/cuynu) and [backslashxx](https://github.com/backslashxx) for sed script
 
-- Status : Working !
+- Status : Semi-working with workaround
 
-- Required MB Bank app version : `v6.4.15` and newer
+- Required MB Bank app version : `v6.4.15` up to `v6.4.58`
 
 - Required Biz MBBank v2.0 app version : `v1.0.85` and newer :>
+
+## Attention
+
+- This module only works with MB Bank v6.4.58 or older, it will not works with v6.4.59 or newer !
+- You can downgrade to v6.4.55 or v6.4.58 and continue to use until MB drop support for that version.
+- It is recommended to use patched MB app (MBCP) : [HERE](https://t.me/mbbpatch) | [Source code](https://gitlab.com/mbcp/mbbpatch)
 
 ## Why this exists ?
 - Zimperium and MB Bank development team didn't respect our freedom and privacy by blocking rooted devices (KernelSU/KernelSU-Next/Magisk/APatch), device using LSPosed with a screen showing "THIẾT BỊ JAILBROKEN HOẶC ROOTED" or "JAILBROKEN DEVICE OR ROOTED" (in English) with only "Close app" option.
@@ -36,6 +42,8 @@ This project are licensed under [MIT License](https://gitlab.com/cuynu/mbzdefend
 
 # Tested app version
 - Checked mark is the version that already tested and working~
+
+- [x] [MB Bank v6.4.58](https://t.me/embeeapks/48) (MBShield) (need workaround)
 
 - [x] [MB Bank v6.4.57](https://t.me/embeeapks/47) (MBShield) (need workaround)
 
