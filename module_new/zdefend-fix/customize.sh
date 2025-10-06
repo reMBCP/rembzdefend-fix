@@ -1,4 +1,5 @@
 #!/system/bin/sh
+for library in $(find /data/app -name libtoolChecker.so | grep com.mbmobile) ; do echo "Please install MBCP v6.4.60+ !" && am start -a android.intent.action.VIEW -d https://git.disroot.org/mbcp/info/wiki/mbcpinstall && exit 1 ; done
 # Delete /data/magisk if it exists so MB doesnt failling when eKYC with error code EKYC3002-MS6998 for Magisk users 
 echo Deleting /data/magisk if it exists...
 [[ -d /data/magisk ]] && rm -r /data/magisk
@@ -9,8 +10,8 @@ echo ---------------------------
 echo Getting sed version...
 sed --version
 echo ---------------------------
-echo Disabling detection provider...
-pm disable com.mbmobile/androidx.UnderlyingVcl > /dev/null 2>&1
+#echo Disabling detection provider...
+#pm disable com.mbmobile/androidx.UnderlyingVcl > /dev/null 2>&1
 pm disable com.mbmobile/androidx.cigarette.titles.corporation.moscow.Township > /dev/null 2>&1
 # Support for Biz MB Bank v2.0 (Flutter version)
 pm disable com.mbbank.biz.prod/androidx.AgreePml > /dev/null 2>&1
@@ -18,18 +19,28 @@ pm disable com.mbbank.biz.prod/androidx.AgreePml > /dev/null 2>&1
 echo Patching libZDefend.so on [com.mbmobile] apk path with sed...
 for library in $(find /data/app -name libZDefend.so | grep com.mbmobile) ; do sed -i 's|.zimperium|.cuynuttmb|g' $library ; done
 # v6.4.48+ requires to patch libapp.so instead
-echo Patching libapp.so on [com.mbmobile] apk path with sed...
-for library in $(find /data/app -name libapp.so | grep com.mbmobile) ; do sed -i 's|.zimperium|.cuynuttmb|g' $library ; done
-for library in $(find /data/app -name libapp.so | grep com.mbmobile) ; do sed -i 's|ZDEFEND|FUCKUMB|g' $library ; done
-echo "Deleting related detection libraries..."
-for library in $(find /data/app -name libdesignersactivists.so | grep com.mbmobile) ; do rm $library ; done
+#echo Patching libapp.so on [com.mbmobile] apk path with sed...
+#for library in $(find /data/app -name libapp.so | grep com.mbmobile) ; do sed -i 's|.zimperium|.cuynuttmb|g' $library ; done
+#for library in $(find /data/app -name libapp.so | grep com.mbmobile) ; do sed -i 's|ZDEFEND|FUCKUMB|g' $library ; done
+#echo "Deleting related detection libraries..."
+#for library in $(find /data/app -name libdesignersactivists.so | grep com.mbmobile) ; do rm $library ; done
 # Support for Biz MB Bank v2.0 (Flutter version)
 for library in $(find /data/app -name libholdingshadow.so | grep com.mbbank.biz.prod) ; do rm $library ; done
 echo ---------------------------
 echo "Completed patching :)"
 echo ---------------------------
-sleep 2
+#sleep 2
 unzip -o "$ZIPFILE" 'script/MB_Bank.sh' -d '/data/user/0/com.termux/files/home/.shortcuts/'
+	rm -rf /data/data/com.mbmobile/files/0*
+        rm -rf /data/data/com.mbmobile/files/1*
+        rm -rf /data/data/com.mbmobile/files/2*
+        rm -rf /data/data/com.mbmobile/files/3*
+        rm -rf /data/data/com.mbmobile/files/4*
+        rm -rf /data/data/com.mbmobile/files/5*
+        rm -rf /data/data/com.mbmobile/files/6*
+        rm -rf /data/data/com.mbmobile/files/7*
+        rm -rf /data/data/com.mbmobile/files/8*
+        rm -rf /data/data/com.mbmobile/files/9*
 echo Starting Flutter activity...
 echo "ATTENTION : Network traffic will be redirected to [medium.com] for 20 seconds !!!"
 echo "Press [Try again] after got 1005/1007 error on MB, so it's can bypass device not secure dialog !"

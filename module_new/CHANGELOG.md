@@ -2,6 +2,10 @@
 Bypass new stupid MB Bank zimperium root/hook detection (does not bypass VTAP root detection)
 
 ## Changelogs :
+- v3.1-mb
+```
+moved to new code structure, only works with patched MB app (MBCP)
+```
 
 - v3.0-mb
 ```
