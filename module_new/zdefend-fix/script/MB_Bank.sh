@@ -2,7 +2,7 @@ su -c am force-stop com.mbmobile
 echo "Starting flutter activity..."
 echo "Network traffic will be redirected to [medium.com] for 20 seconds !!!"
 echo "Press [Try again] after got 1005/1007 error on MB, so it's can bypass device not secure dialog !"
-adb shell su -c rm -rf /data/data/com.mbmobile/files/0*
+	su -c rm -rf /data/data/com.mbmobile/files/0*
         su -c rm -rf /data/data/com.mbmobile/files/1*
         su -c rm -rf /data/data/com.mbmobile/files/2*
         su -c rm -rf /data/data/com.mbmobile/files/3*
