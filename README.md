@@ -1,13 +1,13 @@
-# MB ZDefend Bypass Module for MB Bank
+# MB ZDefend Bypass Module for MB/MBCP
 
 
 - Current module version : `v3.4-mb` | Download from [releases tab](https://git.disroot.org/cuynu/mbzdefend-fix/releases)
 
 - Author : [Cuynu](https://git.disroot.org/cuynu) and [backslashxx](https://github.com/backslashxx) for sed script
 
-- Status : Working
+- Status : Working!
 
-- Required MB Bank app version : `v6.4.67` and up for `v3.2-mb+`, v6.4.15` up to `v6.4.58` for `v3.0-mb` or lower
+- Required MB Bank app version : `v6.4.67` and up for `v3.2-mb+` | `v6.4.15` up to `v6.4.58` for `v3.0-mb` or lower
 
 - Required Biz MBBank v2.0 app version : `v1.0.85` and newer :>
 
@@ -16,17 +16,17 @@
 
 ## Source code
 
-This project are licensed under [MIT License](https://gitlab.com/cuynu/mbzdefend-fix/-/blob/main/LICENSE).
+This project are licensed under [MIT License](https://git.disroot.org/cuynu/mbzdefend-fix).
 
-- For module : Located on [module_new](https://gitlab.com/cuynu/mbzdefend-workaround/-/tree/main/module_new)
+- For module : Located on [module_new](https://git.disroot.org/cuynu/mbzdefend-fix/src/branch/main/module_new/zdefend-fix)
 
 - For patched lib (Deprecated) : There is no source code for that as it belong to MB Bank development team and Zimperium. You can make your own patched lib with old method below if you don't want to use my pre-patched lib :)
 
 ## Usage (Module)
 - Ensure that old root detection (vtap) is bypassed by hiding MB Bank or Biz MBBank v2.0 App from root with any old ways, like Denylist as the module does not handle this old root detection method (For Magisk : [Here](https://www.youtube.com/watch?v=OfFoRltRlME) | For Magisk Delta/Kitsune : [Here](https://www.youtube.com/watch?v=tToyWfJQ-yw)
-- Download mbzdefend-fix module from [releases](https://gitlab.com/cuynu/mbzdefend-workaround/-/releases) or clone the repo, then `./createmodule.sh`
+- Download mbzdefend-fix module from [releases](https://git.disroot.org/cuynu/mbzdefend-fix/releases) or clone the repo, then `./createmodule.sh`
 - Flash with your root app (Magisk, KernelSU, KernelSU Next, APatch, etc)
-- It should automatically patches `libZDefend.so` and `libapp.so` then open MB Bank or Biz MB Bank v2.0 app once it finished.
+- It should automatically patches `libZDefend.so` and `libapp.so` then open MB/MBCP or Biz MB Bank v2.0 app once it finished.
 - NOTE : Every time you need to use MB Bank, you MUST run "Action" on root app -> Modules -> MB ZDefend Bypass instead of open app directly from app drawer (Applies for v6.4.56+ due to server-side MB changes)
 - NOTE : App will open with 1005/1007 error or stuck on MB logo, DON'T PANIC and wait for error popup appears, then press "Try again" until app enter login screen !!!
 
