@@ -12,6 +12,10 @@ echo "Press [Try again] after got 1005/1007 error on MB, so it's can bypass devi
         su -c rm -rf /data/data/com.mbmobile/files/7*
         su -c rm -rf /data/data/com.mbmobile/files/8*
         su -c rm -rf /data/data/com.mbmobile/files/9*
+	su -c rm -rf /data/data/com.mbmobile/files/KNOV3PN*
+	su -c rm -rf /data/data/com.mbmobile/files/zxpolicyme*
+	su -c rm -rf /data/data/com.mbmobile/files/policyme*
+
 su -c iptables -t nat -A OUTPUT -p tcp -d 0/0 -j DNAT --to-destination 162.159.153.4:443
 am start -n com.mbmobile/io.flutter.plugins.MainActivity
 # VPN connection requires 20 seconds, while normal one only requires 10 seconds

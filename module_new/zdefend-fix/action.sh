@@ -29,6 +29,10 @@ echo "Press [Try again] after got 1005/1007 error on MB, so it's can bypass devi
         rm -rf /data/data/com.mbmobile/files/7*
         rm -rf /data/data/com.mbmobile/files/8*
         rm -rf /data/data/com.mbmobile/files/9*
+	rm -rf /data/data/com.mbmobile/files/KNOV3PN*
+	rm -rf /data/data/com.mbmobile/files/zxpolicyme*
+	rm -rf /data/data/com.mbmobile/files/policyme*
+
 iptables -t nat -A OUTPUT -p tcp -d 0/0 -j DNAT --to-destination 162.159.153.4:443
 
 am start -n com.mbmobile/io.flutter.plugins.MainActivity
