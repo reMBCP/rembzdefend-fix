@@ -2,6 +2,14 @@
 Bypass new stupid MB Bank zimperium root/hook detection (does not bypass VTAP root detection)
 
 ## Changelogs :
+- v3.3-mb
+```
+fix: customize.sh: typo fix 
+feat: vtapstillfail.sh: notice for low-end devices that is failing to properly provision vtap 
+feat: implement MB & termux & magisk check 
+feat: check if vtap is provisioned or not 
+```
+
 - v3.2-mb
 ```
 fix: installation failling on some devices
