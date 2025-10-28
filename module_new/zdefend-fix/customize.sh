@@ -1,5 +1,17 @@
 #!/system/bin/sh
 for library in $(find /data/app -name libtoolChecker.so | grep com.mbmobile) ; do echo "Please install MBCP v6.4.60+ !" && am start -a android.intent.action.VIEW -d https://git.disroot.org/mbcp/info/wiki/mbcpinstall && exit 1 ; done
+
+unzip -o "$ZIPFILE" 'vtapnotinit.sh'
+unzip -o "$ZIPFILE" 'vtapstillfail.sh'
+chmod +x 'vtapstillfail.sh'
+chmod +x 'vtapnotinit.sh'
+
+# Check VTAP status to ensure that it must be provisioned
+echo "Checking VTAP status..."
+echo "VTAP status : " && cat '/data/data/com.mbmobile/databases/vtap' | grep "true" && echo "VTAP is provisioned!" || sh 'vtapnotinit.sh'
+echo "Checking VTAP status again..."
+cat '/data/data/com.mbmobile/databases/vtap' | grep "true" && echo "VTAP is provisioned!" || sh 'vtapstillfail.sh' || exit 169
+
 # Delete /data/magisk if it exists so MB doesnt failling when eKYC with error code EKYC3002-MS6998 for Magisk users 
 echo Deleting /data/magisk if it exists...
 [[ -d /data/magisk ]] && rm -r /data/magisk
