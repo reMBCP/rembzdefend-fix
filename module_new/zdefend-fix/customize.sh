@@ -1,5 +1,32 @@
 #!/system/bin/sh
-for library in $(find /data/app -name libtoolChecker.so | grep com.mbmobile) ; do echo "Please install MBCP v6.4.60+ !" && am start -a android.intent.action.VIEW -d https://git.disroot.org/mbcp/info/wiki/mbcpinstall && exit 1 ; done
+
+# Check if MB is installed or nope
+if [[ -d /data/data/com.mbmobile ]]; then
+	echo ""
+else
+	echo "MB/MBCP not found! Please install it!"
+	am start -a android.intent.action.VIEW -d https://git.disroot.org/mbcp/info/wiki/mbcpinstall
+	exit 1
+fi
+
+# Check if Termux ans it's bootstrap is initialzed or not
+if [[ -d /data/data/com.termux ]]; then
+	if [[ -d /data/data/com.termux/files/home ]]; then
+	echo "Termux bootstrap found!"
+	appops set com.termux SYSTEM_ALERT_WINDOW allow
+	else
+	echo "Termux bootstrap not found! Launching Termux..."
+	am start -n com.termux/com.termux.app.TermuxActivity
+	sleep 20
+	am force-stop com.termux
+	appops set com.termux SYSTEM_ALERT_WINDOW allow    
+	fi
+else
+	echo "Termux not installed! skipping"
+fi
+
+# Check for original MB Bank app
+for library in $(find /data/app -name libtoolChecker.so | grep com.mbmobile) ; do echo "MB app is installed, but it's probably not MBCP. Please install MBCP v6.4.60+ !" && am start -a android.intent.action.VIEW -d https://git.disroot.org/mbcp/info/wiki/mbcpinstall && exit 1 ; done
 
 unzip -o "$ZIPFILE" 'vtapnotinit.sh'
 unzip -o "$ZIPFILE" 'vtapstillfail.sh'
@@ -63,7 +90,12 @@ echo "Restoring network traffic"
 iptables -t nat -F OUTPUT
 su -lp 2000 -c "cmd notification post -S bigtext -t 'MBZDefend-Fix' tag 'Please click "Try again" on 1005/1007 screen to continue using MB !'" >/dev/null 2>&1
 sleep 3
-am start -a android.intent.action.VIEW -d https://gitlab.com/mbcp/info/-/wikis/vtaphide
+if [[ -d /data/adb/magisk ]]; then
+	echo "Magisk detected! Opening VTAP hide guide..."
+	am start -a android.intent.action.VIEW -d https://git.disroot.org/mbcp/info/wiki/vtaphide
+else
+	echo "Magisk is not found! ignoring open guide..."
+	fi
 
-echo If you, Google Play or Aurora Store updated MB Bank app and getting detection again, simply reboot your device or run Action to start patching lib again !
+#echo If you, Google Play or Aurora Store updated MB Bank app and getting detection again, simply reboot your device or run Action to start patching lib again !
 
