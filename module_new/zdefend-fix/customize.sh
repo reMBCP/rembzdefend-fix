@@ -9,7 +9,7 @@ else
 	exit 1
 fi
 
-# Check if Termux ans it's bootstrap is initialzed or not
+# Check if Termux and it's bootstrap is initialized or not
 if [[ -d /data/data/com.termux ]]; then
 	if [[ -d /data/data/com.termux/files/home ]]; then
 	echo "Termux bootstrap found!"
