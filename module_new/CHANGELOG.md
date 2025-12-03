@@ -2,6 +2,11 @@
 Bypass new stupid MB Bank zimperium root/hook detection (does not bypass VTAP root detection)
 
 ## Changelogs :
+- v3.5-mb
+```
+feat: redirect zimperium to localhost
+```
+
 - v3.4-mb
 ```
 feat: adapt with new detection point
