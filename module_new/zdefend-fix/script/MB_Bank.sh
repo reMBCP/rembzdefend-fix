@@ -1,3 +1,6 @@
+SYSLANGVI="$(getprop persist.sys.locale | grep vi-VN)"
+
+
 su -c am force-stop com.mbmobile
 echo "Starting flutter activity..."
 echo "Network traffic will be redirected to [medium.com] for 20 seconds !!!"
@@ -22,7 +25,10 @@ am start -n com.mbmobile/io.flutter.plugins.MainActivity
 sleep 20
 echo "Restoring network traffic..."
 su -c iptables -t nat -F OUTPUT
-su -lp 2000 -c "cmd notification post -S bigtext -t 'MBZDefend-Fix' tag 'Please click [Try again] on 1005/1007 screen to continue using MB !'" > /dev/null 2>&1
-su -lp 2000 -c "cmd notification post -S bigtext -t 'MBZDefend-Fix' tag 'Vui lòng ấn [Thử lại] tại màn hình báo lỗi 1005/1007 để tiếp tục sủ dụng MB !'" > /dev/null 2>&1
+if [ $SYSLANGVI ]; then
+	su -lp 2000 -c "cmd notification post -S bigtext -t 'MBZDefend-Fix' tag 'LƯU Ý : Vui lòng nhấn [Thử lại] tại màn hình báo lỗi 1005/1007/VPN để vào App MBCP.'" >/dev/null 2>&1
+else
+	su -lp 2000 -c "cmd notification post -S bigtext -t 'MBZDefend-Fix' tag 'WARNING : Please click [Try again] on 1005/1007/VPN screen to continue entering MBCP App.'" >/dev/null 2>&1
+fi
 sleep 3
 exit

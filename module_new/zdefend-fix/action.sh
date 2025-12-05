@@ -1,20 +1,22 @@
 #!/system/bin/sh	
-for library in $(find /data/app -name libtoolChecker.so | grep com.mbmobile) ; do echo "Please install MBCP v6.4.60+ !" && am start -a android.intent.action.VIEW -d https://git.disroot.org/mbcp/info/wiki/mbcpinstall && exit 1 ; done
+
+SYSLANGVI="$(getprop persist.sys.locale | grep vi-VN)"
+
+notmbcp() {
+	echo "MB Bank [com.mbmobile] is installed, but it seems like that the app is NOT MBCP"
+	echo "Please install MBCP v6.4.60+ in order to use this module !"
+	am start -a android.intent.action.VIEW -d https://git.disroot.org/mbcp/info/wiki/mbcpinstall
+	exit 1
+}
+
+# Check for original MB Bank app
+for library in $(find /data/app -name libvvb2060.so | grep com.mbmobile) ; do notmbcp ; done
+
 # Delete /data/magisk if it exists so MB doesnt failling when eKYC with error code EKYC3002-MS6998 for Magisk users
-echo Deleting /data/magisk if it exists...
+echo "Deleting /data/magisk if it exists..."
 [[ -d /data/magisk ]] && rm -r /data/magisk
 echo Forcing stop MB Bank...
 am force-stop com.mbmobile
-#echo Disabling detection provider...
-#pm disable com.mbmobile/androidx.UnderlyingVcl > /dev/null 2>&1
-#pm disable com.mbmobile/androidx.cigarette.titles.corporation.moscow.Township > /dev/null 2>&1
-# Support for Biz MBBank v2.0 (Flutter)
-pm disable com.mbbank.biz.prod/androidx.AgreePml /dev/null 2>&1
-# For v6.4.47 or lower
-#echo Patching libZDefend.so on [com.mbmobile]...
-#for library in $(find /data/app -name libZDefend.so | grep com.mbmobile) ; do sed -i 's|.zimperium|.cuynuttmb|g' $library ; done
-#echo "Deleting related detection libraries..."
-#for library in $(find /data/app -name libdesignersactivists.so | grep com.mbmobile) ; do rm $library ; done
 
 echo Starting Flutter activity...
 echo "ATTENTION : Network traffic will be redirected to [medium.com] for 20 seconds !!!"
@@ -40,7 +42,10 @@ am start -n com.mbmobile/io.flutter.plugins.MainActivity
 sleep 20
 echo "Restoring network traffic"
 iptables -t nat -F OUTPUT
-su -lp 2000 -c "cmd notification post -S bigtext -t 'MBZDefend-Fix' tag 'Please click [Try again] on 1005/1007 screen to continue using MB !'" >/dev/null 2>&1
-su -lp 2000 -c "cmd notification post -S bigtext -t 'MBZDefend-Fix' tag 'Vui lòng ấn [Thử lại] tại màn hình báo lỗi 1005/1007 để tiếp tục sử dụng MB'" >/dev/null 2>&1
+if [ $SYSLANGVI ]; then
+	su -lp 2000 -c "cmd notification post -S bigtext -t 'MBZDefend-Fix' tag 'LƯU Ý : Vui lòng nhấn [Thử lại] tại màn hình báo lỗi 1005/1007/VPN để vào App MBCP.'" >/dev/null 2>&1
+else
+	su -lp 2000 -c "cmd notification post -S bigtext -t 'MBZDefend-Fix' tag 'WARNING : Please click [Try again] on 1005/1007/VPN screen to continue entering MBCP App.'" >/dev/null 2>&1
+fi
 sleep 3
 
