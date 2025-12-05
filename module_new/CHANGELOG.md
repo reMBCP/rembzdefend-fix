@@ -1,7 +1,20 @@
-# MBZDefend-Fix
+# MBZDefend-Fix by Cuynu
 Bypass new stupid MB Bank zimperium root/hook detection (does not bypass VTAP root detection)
 
 ## Changelogs :
+- v3.6-mb
+```
+feat: misc changes
+- remove old patching code (v6.4.55 or older please use older version)
+- new auto granting app permission
+- improve code logic
+- support english & vietnamese language for MBZDefend-Fix notification
+- other changes idk
+
+joke: im not (or is) a developer
+
+```
+
 - v3.5-mb
 ```
 feat: redirect zimperium to localhost
