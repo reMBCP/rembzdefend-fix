@@ -1,13 +1,13 @@
 # MB ZDefend Bypass Module for MB/MBCP
 
 
-- Current module version : `v3.4-mb` | Download from [releases tab](https://git.disroot.org/cuynu/mbzdefend-fix/releases)
+- Current module version : `v3.6-mb` | Download from [releases tab](https://git.disroot.org/cuynu/mbzdefend-fix/releases) 
 
 - Author : [Cuynu](https://git.disroot.org/cuynu) and [backslashxx](https://github.com/backslashxx) for sed script
 
-- Status : Working!
+- Status : Working with MBCP!
 
-- Required MB Bank app version : `v6.4.67` and up for `v3.2-mb+` | `v6.4.15` up to `v6.4.58` for `v3.0-mb` or lower
+- Required app version : MBCP `v6.4.67` and up for `v3.2-mb+` | MB `v6.4.15` up to `v6.4.58` for `v3.0-mb` or lower
 
 - Required Biz MBBank v2.0 app version : `v1.0.85` and newer :>
 
