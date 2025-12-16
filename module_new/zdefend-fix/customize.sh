@@ -73,6 +73,15 @@ cat '/data/data/com.mbmobile/databases/vtap' | grep "true" && echo "VTAP is prov
 echo Deleting /data/magisk if it exists...
 [ -d /data/magisk ] && rm -r /data/magisk
 echo ---------------------------
+
+if [ -d /data/adb/magisk ]; then
+	echo "Enabling Denylist for [com.mbmobile]..."
+	magisk --denylist enable
+	magisk --denylist add com.mbmobile
+else
+	echo "Magisk not detected! Skipping Denylist"
+fi
+
 echo Force closing MBBank app...
 am force-stop com.mbmobile
 
@@ -105,23 +114,15 @@ iptables -t nat -F OUTPUT
 
 if [ $SYSLANGVI ]; then
 	su -lp 2000 -c "cmd notification post -S bigtext -t 'MBZDefend-Fix' tag 'LƯU Ý : Vui lòng nhấn [Thử lại] tại màn hình báo lỗi 1005/1007/VPN để vào App MBCP. Sau khi thao tác xong, nên khởi động lại thiết bị ngay.'" >/dev/null 2>&1
+	[ -d /data/adb/magisk ] && am start -a android.intent.action.VIEW -d https://git.disroot.org/mbcp/info_vi/wiki/vtapfix
+	[ -d /data/data/me.weishu.kernelsu ] && am start -a android.intent.action.VIEW -d https://git.disroot.org/mbcp/info_vi/wiki/vtapfix
 else
 	su -lp 2000 -c "cmd notification post -S bigtext -t 'MBZDefend-Fix' tag 'WARNING : Please click [Try again] on 1005/1007/VPN screen to continue entering MBCP App, then reboot your device ASAP.'" >/dev/null 2>&1
+	[ -d /data/adb/magisk ] && am start -a android.intent.action.VIEW -d https://git.disroot.org/mbcp/info_en/wiki/vtapfix
+	[ -d /data/data/me.weishu.kernelsu ] && am start -a android.intent.action.VIEW -d https://git.disroot.org/mbcp/info_en/wiki/vtapfix
+
 fi
 	sleep 3
-if [ -d /data/adb/magisk ]; then
-	echo "Magisk detected! Opening VTAP hide guide..."
-	am start -a android.intent.action.VIEW -d https://git.disroot.org/mbcp/info/wiki/vtaphide
-else
-	echo "Magisk is not found! ignoring open guide..."
-	fi
 
-if [ -d /data/data/me.weishu.kernelsu ]; then
-	echo "KernelSU (with original packageName) detected! Opening VTAP hide guide..."
-  	am start -a android.intent.action.VIEW -d https://git.disroot.org/mbcp/info/wiki/vtaphide
-else
-	echo "KernelSU (with original packageName) not found! ignoring open guide..."
-fi
 
-#echo If you, Google Play or Aurora Store updated MB Bank app and getting detection again, simply reboot your device or run Action to start patching lib again !
 
