@@ -2,6 +2,15 @@
 Bypass new stupid MB Bank zimperium root/hook detection (does not bypass VTAP root detection)
 
 ## Changelogs :
+
+- v3.7-mb
+```
+feat: bump v3.7-mb
+feat: createmodule.sh: commit id after module name
+feat: vtapstillfail.sh: open vtapfix after vtap failling to init
+feat: customize.sh: handle denylist for magisk & depends on syslang to open proper vtapfix web
+```
+
 - v3.6-mb
 ```
 feat: misc changes
