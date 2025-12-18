@@ -8,7 +8,7 @@ cd module_new/zdefend-fix
 zip -r mbzdefend_fix_bindhosts_$COMMIT.zip . >/dev/null 2>&1
 cd ..
 cd ..
-mv module_new/zdefend-fix/mbzdefend_fix_*.zip mbzdefend_fix_$COMMIT.zip
+mv module_new/zdefend-fix/mbzdefend_fix_*.zip mbzdefend_fix_bindhosts_$COMMIT.zip
 
 if [ -f mbzdefend_fix_*.zip ]; then
 	echo "Module saved to [mbzdefend_fix_bindhosts_$COMMIT.zip], try to flash it :>"
