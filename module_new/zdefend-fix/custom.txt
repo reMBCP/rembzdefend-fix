@@ -1,0 +1,12 @@
+# custom rules
+# WARNING! custom rules are loaded on both run and reset!
+#
+# add custom redirects here
+# ip hostname
+#
+# example:
+# 1.1.1.1 one.one.one.one
+# 93.184.215.14 example.com
+127.0.0.1 zimperium.com
+127.0.0.1 cdn.zimperium.com
+127.0.0.1 gts.zimperium.com
