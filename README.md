@@ -1,7 +1,7 @@
 # MB ZDefend Bypass Module for MB/MBCP
 
 
-- Current module version : `v3.6-mb` | Download from [releases tab](https://git.disroot.org/cuynu/mbzdefend-fix/releases) 
+- Download from [releases tab](https://git.disroot.org/cuynu/mbzdefend-fix/releases) 
 
 - Author : [Cuynu](https://git.disroot.org/cuynu) and [backslashxx](https://github.com/backslashxx) for sed script
 
