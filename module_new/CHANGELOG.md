@@ -2,6 +2,11 @@
 Bypass new stupid MB Bank zimperium root/hook detection (does not bypass VTAP root detection)
 
 ## Changelogs :
+- v3.9-mb
+```
+feat: action.sh: also check vtap provision status for action script
+```
+
 - v3.8-mb
 ```
 fix: customize.sh: execute denylist fix before vtap check
