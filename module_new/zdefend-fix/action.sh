@@ -12,6 +12,13 @@ notmbcp() {
 # Check for original MB Bank app
 for library in $(find /data/app -name libvvb2060.so | grep com.mbmobile) ; do notmbcp ; done
 
+# Check VTAP status to ensure that it must be provisioned
+echo "Checking VTAP status..."
+echo "VTAP status : " && cat '/data/data/com.mbmobile/databases/vtap' | grep "true" && echo "VTAP is provisioned!" || sh 'vtapnotinit.sh'
+echo "Checking VTAP status again..."
+cat '/data/data/com.mbmobile/databases/vtap' | grep "true" && echo "VTAP is provisioned!" || sh 'vtapstillfail.sh' || exit 169
+
+
 # Delete /data/magisk if it exists so MB doesnt failling when eKYC with error code EKYC3002-MS6998 for Magisk users
 echo "Deleting /data/magisk if it exists..."
 [[ -d /data/magisk ]] && rm -r /data/magisk
