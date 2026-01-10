@@ -27,6 +27,7 @@ if [ -d /data/data/com.termux ]; then
 	if [[ -d /data/data/com.termux/files/home ]]; then
 	echo "Termux bootstrap found!"
 	appops set com.termux SYSTEM_ALERT_WINDOW allow
+	unzip -o "$ZIPFILE" 'script/MB_Bank.sh' -d '/data/user/0/com.termux/files/home/.shortcuts/'
 	else
 	echo "Termux bootstrap not found! Launching Termux..."
 	am start -n com.termux/com.termux.app.TermuxActivity
@@ -90,8 +91,6 @@ am force-stop com.mbmobile
 # Support for Biz MB Bank v2.0 (Flutter version)
 for library in $(find /data/app -name libholdingshadow.so | grep com.mbbank.biz.prod) ; do rm $library ; done
 sleep 2
-
-unzip -o "$ZIPFILE" 'script/MB_Bank.sh' -d '/data/user/0/com.termux/files/home/.shortcuts/'
 	rm -rf /data/data/com.mbmobile/files/0*
         rm -rf /data/data/com.mbmobile/files/1*
         rm -rf /data/data/com.mbmobile/files/2*
