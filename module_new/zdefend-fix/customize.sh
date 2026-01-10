@@ -3,10 +3,13 @@
 SYSLANGVI="$(getprop persist.sys.locale | grep vi-VN)"
 ANDROIDSDK="$(getprop ro.build.version.sdk)"
 
+INSTALLVI="https://git.disroot.org/mbcp/info_vi/wiki/mbcpinstall"
+INSTALLEN="https://git.disroot.org/mbcp/info_en/wiki/mbcpinstall"
+
 notmbcp() {
 	echo "MB Bank [com.mbmobile] is installed, but it seems like that the app is NOT MBCP"
 	echo "Please install MBCP v6.4.60+ in order to use this module !"
-	am start -a android.intent.action.VIEW -d https://git.disroot.org/mbcp/info/wiki/mbcpinstall
+	[[ $SYSLANGVI ]] && am start -a android.intent.action.VIEW -d $INSTALLVI || am start -a android.intent.action.VIEW -d $INSTALLEN
 	exit 1
 }
 
@@ -30,7 +33,7 @@ if [ -d /data/data/com.mbmobile ]; then
 	echo ""
 else
 	echo "MB/MBCP not found! Please install it!"
-	am start -a android.intent.action.VIEW -d https://git.disroot.org/mbcp/info/wiki/mbcpinstall
+	[[ $SYSLANGVI ]] && am start -a android.intent.action.VIEW -d $INSTALLVI || am start -a android.intent.action.VIEW -d $INSTALLEN
 	exit 1
 fi
 
@@ -79,8 +82,7 @@ chmod +x 'vtapstillfail.sh'
 chmod +x 'vtapnotinit.sh'
 
 # Delete /data/magisk if it exists so MB doesnt failling when eKYC with error code EKYC3002-MS6998 for Magisk users 
-echo Deleting /data/magisk if it exists...
-[ -d /data/magisk ] && rm -r /data/magisk
+[ -d /data/magisk ] && echo "Magisk folder found! deleting..." && rm -r /data/magisk 
 echo ---------------------------
 
 if [ -d /data/adb/magisk ]; then
