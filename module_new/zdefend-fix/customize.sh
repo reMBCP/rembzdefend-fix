@@ -84,6 +84,7 @@ chmod +x 'vtapnotinit.sh'
 
 # Delete /data/magisk if it exists so MB doesnt failling when eKYC with error code EKYC3002-MS6998 for Magisk users 
 [ -d /data/magisk ] && echo "Magisk folder found! deleting..." && rm -r /data/magisk 
+find /data -name 'magisk_backup*' -delete
 echo ---------------------------
 
 if [ -d /data/adb/magisk ]; then
@@ -120,13 +121,15 @@ sleep 2
 	rm -rf /data/data/com.mbmobile/files/zxpolicyme*
 	rm -rf /data/data/com.mbmobile/files/policyme*
 echo Starting Flutter activity...
-echo "ATTENTION : Network traffic will be redirected to [medium.com] for 20 seconds !!!"
-echo "Press [Try again] after got 1005/1007 error on MB, so it's can bypass device not secure dialog !"
-iptables -t nat -A OUTPUT -p tcp -d 0/0 -j DNAT --to-destination 162.159.153.4:443 
+echo "ATTENTION : Network traffic will be redirected to fake IP for 20 seconds !!!"
+echo "Press [Try again] after got 1005/1007/VPN error on MB, so it's can bypass device not secure dialog !"
+# Reference : https://superuser.com/questions/1248670/redirect-ip-to-another-ip-using-iptables
+iptables -t nat -A OUTPUT -p tcp -j DNAT --to-destination 122.122.0.122
 am start -n com.mbmobile/io.flutter.plugins.MainActivity
 sleep 20
 echo "Restoring network traffic"
-iptables -t nat -F OUTPUT
+# Reference : https://gist.github.com/jstrosch/3190568 (Line 7)
+iptables -t nat -F 
 
 if [ $SYSLANGVI ]; then
 	su -lp 2000 -c "cmd notification post -S bigtext -t 'MBZDefend-Fix' tag 'LƯU Ý : Vui lòng nhấn [Thử lại] tại màn hình báo lỗi 1005/1007/VPN để vào App MBCP. Sau khi thao tác xong, nên khởi động lại thiết bị ngay.'" >/dev/null 2>&1
