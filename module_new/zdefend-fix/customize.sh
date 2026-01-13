@@ -6,6 +6,9 @@ ANDROIDSDK="$(getprop ro.build.version.sdk)"
 INSTALLVI="https://git.disroot.org/mbcp/info_vi/wiki/mbcpinstall"
 INSTALLEN="https://git.disroot.org/mbcp/info_en/wiki/mbcpinstall"
 
+# Clear old iptables
+iptables -t nat -F
+
 notmbcp() {
 	echo "MB Bank [com.mbmobile] is installed, but it seems like that the app is NOT MBCP"
 	echo "Please install MBCP v6.4.60+ in order to use this module !"
@@ -121,10 +124,10 @@ sleep 2
 	rm -rf /data/data/com.mbmobile/files/zxpolicyme*
 	rm -rf /data/data/com.mbmobile/files/policyme*
 echo Starting Flutter activity...
-echo "ATTENTION : Network traffic will be redirected to fake IP for 20 seconds !!!"
+echo "ATTENTION : Network traffic will be redirected to [medium.com] for 20 seconds !!!"
 echo "Press [Try again] after got 1005/1007/VPN error on MB, so it's can bypass device not secure dialog !"
 # Reference : https://superuser.com/questions/1248670/redirect-ip-to-another-ip-using-iptables
-iptables -t nat -A OUTPUT -p tcp -j DNAT --to-destination 122.122.0.122
+iptables -t nat -A OUTPUT -p tcp -j DNAT --to-destination 162.159.152.4
 am start -n com.mbmobile/io.flutter.plugins.MainActivity
 sleep 20
 echo "Restoring network traffic"

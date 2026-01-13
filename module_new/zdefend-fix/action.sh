@@ -38,10 +38,10 @@ am force-stop com.mbmobile
 	rm -rf /data/data/com.mbmobile/files/KNOV3PN*
 	rm -rf /data/data/com.mbmobile/files/zxpolicyme*
 	rm -rf /data/data/com.mbmobile/files/policyme*
-echo "ATTENTION : Network traffic will be redirected to fake IP for 20 seconds !!!"
+echo "ATTENTION : Network traffic will be redirected to [medium.com] for 20 seconds !!!"
 echo "Press [Try again] after got 1005/1007/VPN error on MB, so it's can bypass device not secure dialog !"
 # Reference : https://superuser.com/questions/1248670/redirect-ip-to-another-ip-using-iptables
-iptables -t nat -A OUTPUT -p tcp -j DNAT --to-destination 122.122.0.122
+iptables -t nat -A OUTPUT -p tcp -j DNAT --to-destination 162.159.152.4
 am start -n com.mbmobile/io.flutter.plugins.MainActivity
 sleep 20
 echo "Restoring network traffic"
