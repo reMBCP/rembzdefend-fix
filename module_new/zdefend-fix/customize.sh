@@ -25,6 +25,13 @@ notmbcp() {
 
 # Replacement for /system/etc/hosts
 # Fixes module being disabled due to bindhosts module
+
+nobindhosts() {
+	echo "[bindhosts] module not found"
+	echo "Please use normal MBZDefend-Fix module instead !"
+	exit 169
+}
+
 bindhosts() {
 	echo "bindhosts module found ! Copying custom.txt"
 	unzip -o "$ZIPFILE" 'custom.txt' -d '/data/adb/bindhosts/'
