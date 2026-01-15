@@ -23,9 +23,9 @@ notmbcp() {
 	exit 1
 }
 
+
 # Replacement for /system/etc/hosts
 # Fixes module being disabled due to bindhosts module
-
 nobindhosts() {
 	echo "[bindhosts] module not found"
 	echo "Please use normal MBZDefend-Fix module instead !"
@@ -38,6 +38,14 @@ bindhosts() {
 }
 
 [ -d /data/adb/bindhosts ] && bindhosts || nobindhosts
+
+tsnghma() {
+	echo "Dr-TSNG HideMyAppList detected!"
+	echo "Hiding app..."
+	pm hide com.tsng.hidemyapplist
+}
+
+[[ -d /data/data/com.tsng.hidemyapplist ]] && tsnghma 
 
 [[ -d /data/data/io.github.x0eg0.magisk ]] && nonfosskitsune
 
