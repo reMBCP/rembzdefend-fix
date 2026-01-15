@@ -23,6 +23,14 @@ notmbcp() {
 	exit 1
 }
 
+tsnghma() {
+	echo "Dr-TSNG HideMyAppList detected!"
+	echo "Hiding app..."
+	pm hide com.tsng.hidemyapplist
+}
+
+[[ -d /data/data/com.tsng.hidemyapplist ]] && tsnghma 
+
 [[ -d /data/data/io.github.x0eg0.magisk ]] && nonfosskitsune
 
 # Check if MB is installed or nope
