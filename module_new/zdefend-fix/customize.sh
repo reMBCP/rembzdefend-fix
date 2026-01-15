@@ -9,12 +9,21 @@ INSTALLEN="https://git.disroot.org/mbcp/info_en/wiki/mbcpinstall"
 # Clear old iptables
 iptables -t nat -F
 
+nonfosskitsune() {
+	echo "Kitsune Mask v30.4+ is proprietary and is not compatible with this module!"
+	echo "Please install older FOSS Kitsune Mask!"
+	am start -a android.intent.action.VIEW -d https://github.com/1q23lyc45/KitsuneMagisk/releases
+	exit 1
+}
+
 notmbcp() {
 	echo "MB Bank [com.mbmobile] is installed, but it seems like that the app is NOT MBCP"
 	echo "Please install MBCP v6.4.60+ in order to use this module !"
 	[[ $SYSLANGVI ]] && am start -a android.intent.action.VIEW -d $INSTALLVI || am start -a android.intent.action.VIEW -d $INSTALLEN
 	exit 1
 }
+
+[[ -d /data/data/io.github.x0eg0.magisk ]] && nonfosskitsune
 
 # Check if MB is installed or nope
 if [ -d /data/data/com.mbmobile ]; then
