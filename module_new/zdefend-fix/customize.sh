@@ -9,6 +9,13 @@ INSTALLEN="https://git.disroot.org/mbcp/info_en/wiki/mbcpinstall"
 # Clear old iptables
 iptables -t nat -F
 
+nonfosskitsune() {
+	echo "Kitsune Mask v30.4+ is proprietary and is not compatible with this module!"
+	echo "Please install older FOSS Kitsune Mask!"
+	am start -a android.intent.action.VIEW -d https://github.com/1q23lyc45/KitsuneMagisk/releases
+	exit 1
+}
+
 notmbcp() {
 	echo "MB Bank [com.mbmobile] is installed, but it seems like that the app is NOT MBCP"
 	echo "Please install MBCP v6.4.60+ in order to use this module !"
@@ -18,18 +25,15 @@ notmbcp() {
 
 # Replacement for /system/etc/hosts
 # Fixes module being disabled due to bindhosts module
-nobindhosts() {
-	echo "[bindhosts] module not found"
-	echo "Please use normal MBZDefend-Fix module instead !"
-	exit 169
-}
-
 bindhosts() {
 	echo "bindhosts module found ! Copying custom.txt"
 	unzip -o "$ZIPFILE" 'custom.txt' -d '/data/adb/bindhosts/'
 }
 
 [ -d /data/adb/bindhosts ] && bindhosts || nobindhosts
+
+[[ -d /data/data/io.github.x0eg0.magisk ]] && nonfosskitsune
+
 
 # Check if MB is installed or nope
 if [ -d /data/data/com.mbmobile ]; then
@@ -61,8 +65,6 @@ fi
 for library in $(find /data/app -name libvvb2060.so | grep com.mbmobile) ; do notmbcp ; done
 
 # Grant permission for MB/MBCP app
-
-
 if [ $ANDROIDSDK -gt 33 ]; then
 	echo "Granting MB/MBCP app permission..."
 	pm grant com.mbmobile android.permission.CAMERA
