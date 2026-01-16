@@ -2,6 +2,17 @@
 Bypass new stupid MB Bank zimperium root/hook detection (does not bypass VTAP root detection)
 
 ## Changelogs :
+- v4.0-mb
+```
+feat: service.sh: delete module itself if proprietary kitsune mask is found
+feat: customize.sh: hide com.tsng.hidemyapplist package during module installation
+feat: customize.sh: enforce foss kitsune mask
+fix: wrong ip
+feat: redirect to fake IP instead
+fix: customize.sh: unzip shortcut after termux bootstrap is found
+feat: customize.sh: depends on syslang to open right mbcpinstall page
+```
+
 - v3.9-mb
 ```
 feat: action.sh: also check vtap provision status for action script

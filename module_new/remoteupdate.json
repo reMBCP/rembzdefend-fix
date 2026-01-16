@@ -1,6 +1,6 @@
 {
-	"version": "v3.9-mb",
-	"versionCode": "39",
-	"zipUrl": "https://git.disroot.org/mbcp/mbzdefend-fix/releases/download/v3.9-mb/mbzdefend_fix_8ac6746.zip",
+	"version": "v4.0-mb",
+	"versionCode": "40",
+	"zipUrl": "https://git.disroot.org/mbcp/mbzdefend-fix/releases/download/v4.0-mb/",
 	"changelog": "https://git.disroot.org/cuynu/mbzdefend-fix/raw/branch/main/module_new/CHANGELOG.md"
 }
