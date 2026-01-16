@@ -1,9 +1,9 @@
 # MB ZDefend Bypass Module for MB/MBCP
 
 
-- Download from [releases tab](https://git.disroot.org/cuynu/mbzdefend-fix/releases) 
+- Download from [releases tab](mbcp/mbzdefend-fix/releases)
 
-- Author : [Cuynu](https://git.disroot.org/cuynu) and [backslashxx](https://github.com/backslashxx) for sed script
+- Author : [Cuynu](/cuynu) and [backslashxx](https://github.com/backslashxx) for sed script
 
 - Status : Working with MBCP!
 
@@ -13,6 +13,13 @@
 
 ## Why this exists ?
 - Zimperium and MB Bank development team didn't respect our freedom and privacy by blocking rooted devices (KernelSU/KernelSU-Next/Magisk/APatch), device using LSPosed with a screen showing "THIẾT BỊ JAILBROKEN HOẶC ROOTED" or "JAILBROKEN DEVICE OR ROOTED" (in English) with only "Close app" option.
+
+## Building
+```
+git clone https://git.disroot.org/mbcp/mbzdefend-fix.git
+cd mbzdefend-fix
+./createmodule.sh
+```
 
 ## Source code
 
