@@ -18,7 +18,7 @@ Note: No matter how lucky we are in 2026, once we encounter the creator of this 
 
 ## Building
 ```
-git clone https://git.disroot.org/mbcp/mbzdefend-fix.git
+git clone ttps://git.disroot.org/mbcp/mbzdefend-fix.git](https://github.com/reMBCP/rembzdefend-fix.git
 cd mbzdefend-fix
 ./createmodule.sh
 ```
