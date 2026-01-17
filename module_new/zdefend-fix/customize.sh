@@ -9,65 +9,6 @@ INSTALLEN="https://git.disroot.org/mbcp/info_en/wiki/mbcpinstall"
 # Clear old iptables
 iptables -t nat -F
 
-tsnghma() {
-	echo "Dr-TSNG HideMyAppList detected!"
-	echo "Hiding app..."
-	pm hide com.tsng.hidemyapplist
-}
-
-[[ -d /data/data/com.tsng.hidemyapplist ]] && tsnghma 
-
-[[ -d /data/data/io.github.Nirtal0.magisk ]] && maliciousmagisk 
-
-[[ -d /data/data/io.github.x0eg0.magisk ]] && nonfosskitsune
-
-# Check if MB is installed or nope
-if [ -d /data/data/com.mbmobile ]; then
-	echo ""
-else
-	echo "MB/MBCP not found! Please install it!"
-	[[ $SYSLANGVI ]] && am start -a android.intent.action.VIEW -d $INSTALLVI || am start -a android.intent.action.VIEW -d $INSTALLEN
-	exit 1
-fi
-
-# Check if Termux and it's bootstrap is initialized or not
-if [ -d /data/data/com.termux ]; then
-	if [[ -d /data/data/com.termux/files/home ]]; then
-	echo "Termux bootstrap found!"
-	appops set com.termux SYSTEM_ALERT_WINDOW allow
-	unzip -o "$ZIPFILE" 'script/MB_Bank.sh' -d '/data/user/0/com.termux/files/home/.shortcuts/'
-	else
-	echo "Termux bootstrap not found! Launching Termux..."
-	am start -n com.termux/com.termux.app.TermuxActivity
-	sleep 20
-	am force-stop com.termux
-	appops set com.termux SYSTEM_ALERT_WINDOW allow    
-	fi
-else
-	echo "Termux not installed! skipping"
-fi
-
-
-# Grant permission for MB/MBCP app
-
-
-if [ $ANDROIDSDK -gt 33 ]; then
-	echo "Granting MB/MBCP app permission..."
-	pm grant com.mbmobile android.permission.CAMERA
-	pm grant com.mbmobile android.permission.RECORD_AUDIO
-	pm grant com.mbmobile android.permission.POST_NOTIFICATIONS
-	pm grant com.mbmobile android.permission.ACCESS_FINE_LOCATION
-	pm grant com.mbmobile android.permission.READ_CONTACTS
-	pm grant com.mbmobile android.permission.READ_PHONE_STATE
-	pm grant com.mbmobile android.permission.BLUETOOTH_CONNECT
-else
-	echo "Android version is lower than 13! Granting basic MB/MBCP app permission..."
-	pm grant com.mbmobile android.permission.CAMERA
-	pm grant com.mbmobile android.permission.RECORD_AUDIO
-	pm grant com.mbmobile android.permission.READ_CONTACTS
-	pm grant com.mbmobile android.permission.READ_PHONE_STATE
-fi
-
 unzip -o "$ZIPFILE" 'vtapnotinit.sh'
 unzip -o "$ZIPFILE" 'vtapstillfail.sh'
 chmod +x 'vtapstillfail.sh'
