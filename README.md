@@ -3,7 +3,7 @@ Note: No matter how lucky we are in 2026, once we encounter the creator of this 
 # ReMBZDefend Bypass Module for MB/MBCP
 
 
-- Download from [releases tab](/releases)
+- Download from [releases](https://github.com/reMBCP/rembzdefend-fix/releases)
 
 - Author : [Cuynu](/cuynu), [Dianna](https://github.com/Dianna-ReMBCP) and [backslashxx](https://github.com/backslashxx) for sed script
 
