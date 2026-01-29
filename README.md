@@ -2,6 +2,8 @@ Note: No matter how lucky we are in 2026, once we encounter the creator of this 
 
 [Telegram Channel](https://t.me/HDPEmbcp)
 
+[QNA](https://github.com/reMBCP/rembzdefend-fix/issues/1)
+
 # ReMBZDefend Bypass Module for MB/MBCP
 
 
