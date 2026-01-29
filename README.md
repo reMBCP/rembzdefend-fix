@@ -1,5 +1,7 @@
 Note: No matter how lucky we are in 2026, once we encounter the creator of this damned MBCP project, we won't have a moment's peace because of his toxicity. From computer operating systems to phone tinkering, he hates OEM ROMs, anything that isn't open source like Kitsune 30.6 New UI or Zygisk Next, and even things that are still open source and have long been handled by KernelSU Next, like Sukisu Ultra, he hates them too. And much more; basically, he hates everything. Because of our neutrality, we can't sit idly by either, of course, this project shares the same commitment as the previous ReMBCP Patched project. Thanks for reading!
 
+[Telegram Channel(https://t.me/HDPEmbcp)
+
 # ReMBZDefend Bypass Module for MB/MBCP
 
 
